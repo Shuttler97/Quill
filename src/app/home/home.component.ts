@@ -5,47 +5,59 @@ import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewCh
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
   @ViewChild('a', { read: ElementRef, static:false }) aImg: ElementRef |undefined;
+  @ViewChild('side', { read: ElementRef, static:false }) side: ElementRef |undefined;
+
   counter =0
+  barCounter = 0;
   constructor( private changeDetection: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     setInterval(() => {
       this.addActiveClass()
+      this.addProgressBar()
     }, 5000);
   }
 
-  ngAfterViewInit(){
-    
-  }
 
   addActiveClass(){
     if(this.aImg){
     var c = this.counter % this.aImg?.nativeElement.children.length;
     for(let i=0;i <  this.aImg?.nativeElement.children.length;i++){
-      this.aImg?.nativeElement.children[i].classList.remove('active');
       this.aImg?.nativeElement.children[i].setAttribute("style", "display: none")
-      console.log(this.aImg.nativeElement.children[i].children)
-      for(let j=0; j<this.aImg.nativeElement.children[i].children.length ; j++){
-        this.aImg.nativeElement.children[i].children[j].classList.remove('active')
-      this.aImg?.nativeElement.children[i].children[j].setAttribute("style", "opacity: 0")
+      // for(let j=0; j<this.aImg.nativeElement.children[i].children.length ; j++){
+      this.aImg?.nativeElement.children[i].children[0].classList.remove("userTextActive")
+      this.aImg?.nativeElement.children[i].children[1].classList.remove("correctionActive")
+      
 
-
-      }
+      // }
     }
 
-     this.aImg?.nativeElement.children[c].classList.add('active')
      this.aImg?.nativeElement.children[c].setAttribute("style", "display: block")
-     for(let j=0; j<this.aImg.nativeElement.children[c].children.length ; j++){
-      this.aImg.nativeElement.children[c].children[j].classList.add('active')
-      this.aImg?.nativeElement.children[c].children[j].setAttribute("style", "opacity:1")
+    //  for(let j=0; j<this.aImg.nativeElement.children[c].children.length ; j++){
+      this.aImg?.nativeElement.children[c].children[0].classList.add('userTextActive')
+      this.aImg?.nativeElement.children[c].children[1].classList.add('correctionActive')
 
 
-    }
+
+    // }
 
       ++this.counter
     }
+  }
+  addProgressBar(){
+    if(this.side){
+    var c = this.barCounter % this.side?.nativeElement.children.length;
+    console.log()
+    for(let i=0;i <  this.side?.nativeElement.children.length;i++){
+    this.side.nativeElement.children[i].children[2].children[0].children[0].classList.remove('progressActive')
+    }
+    this.side.nativeElement.children[c].children[2].children[0].children[0].classList.add('progressActive')
+
+    ++this.barCounter
+    }
+
   }
 
 }
