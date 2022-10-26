@@ -1,0 +1,15 @@
+<div class="d-flex box">
+    <div class="title">
+        <h1>Premium Customers Report Better Results</h1>
+        <p class="heading-subtitle">Unlock Grammarly Premium’s advanced features and suggestions.</p>
+    </div>
+    <div class="d-flex justify-space ">
+        <div *ngFor="let val of values" class="value-box">
+            <circle-progress [percent]="val.value" [radius]="75" [title]="val.value +'%'" [showSubtitle]="false"
+                [startFromZero]="true" [animation]="true" [animateTitle]="true" [animationDuration]="500" [lazy]="true">
+            </circle-progress>
+            <p>{{val.value}}% {{val.text}}</p>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+h1{
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    font-size: 29px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1080px;
+    position: relative;
+    padding:64px 0 ;
+}
+.box .title .heading-subtitle{
+    font-size: 18px;
+    line-height: 32px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 20px 0;
+   
+}
+.value-box{
+    width: 320px;
+    font-size: 16px;
+}

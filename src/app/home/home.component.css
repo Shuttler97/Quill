@@ -1,0 +1,72 @@
+.home{
+    background: no-repeat left -150px top -50px url("https://static.grammarly.com/assets/files/06666c30f97cce25ac1cf1c4573332c2/swoosh.png");
+    display: flex;
+    min-height: 680px;
+    padding: 32px 0;
+}
+.box{
+    display: -webkit-flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0 auto;
+    max-width: 990px;
+    position: relative;
+}
+.box .title{
+    text-align: center;
+}
+.box .title h1{
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    font-size: 42px;
+}
+.box .title button{
+    text-align: center;
+    margin: 40px 0;
+    padding: 5px 25px;
+}
+
+.section-contianer{
+    flex:1
+}
+
+.image-container{
+    height: 336px;
+    position: relative;
+    width: 0;
+    display: none;
+}
+
+.user-text {
+    opacity: 1;
+    position: absolute;
+    transform: translate3d(0,-30px,0);
+    transition: all .3s ease .2s;
+    transition-property: opacity,transform;
+    z-index: 1;
+}
+/* .user-text  {
+    -webkit-transform: translateZ(0);
+    filter: none;
+    opacity: 1;
+    transform: translateZ(0)
+} */
+.correction {
+    border-radius: 10px;
+    box-shadow: 0 14px 55px rgb(109 117 141 / 20%);
+    filter: alpha(opacity=0);
+    opacity: 1;
+    position: absolute;
+    transform: translate3d(0,-30px,0);
+    transition: all .3s ease 1s;
+    transition-property: opacity,transform;
+    z-index: 2;
+    bottom: 0px;
+    left: 100px;
+}
+/* .correction .active{
+    -webkit-transform: translateZ(0);
+    filter: none;
+    transform: translateZ(0);
+} */
