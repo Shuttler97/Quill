@@ -18,3 +18,7 @@ body { margin: 0; font-family: Inter, sans-serif; font-size: 14px; }
 .mt-4{
 margin-top: 4rem;
 }
+.bg-gray{
+    background: #F9FAFF;
+
+}

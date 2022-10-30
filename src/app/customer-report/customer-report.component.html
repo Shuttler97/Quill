@@ -6,7 +6,11 @@
     <div class="d-flex justify-space ">
         <div *ngFor="let val of values" class="value-box">
             <circle-progress [percent]="val.value" [radius]="75" [title]="val.value +'%'" [showSubtitle]="false"
-                [startFromZero]="true" [animation]="true" [animateTitle]="true" [animationDuration]="500" [lazy]="true">
+                [animation]="true"
+                 [animateTitle]="true" 
+                [startFromZero]="true" 
+                 [animationDuration]="1000" 
+                >
             </circle-progress>
             <p>{{val.value}}% {{val.text}}</p>
         </div>

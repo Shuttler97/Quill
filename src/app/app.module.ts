@@ -34,7 +34,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
     MatIconModule,
     BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({
-      "backgroundPadding": 7,
       "radius": 60,
       "space": -4,
       "outerStrokeWidth": 4,
@@ -42,11 +41,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
       "innerStrokeColor": "#E6E6E8",
       "innerStrokeWidth": 4,
       "titleFontSize": "40",
-      "animateTitle": true,
-      animation:true,
-      "animationDuration": 1000,
-      startFromZero:true,
-      lazy:true,
       "showUnits": false,
       "clockwise": true})
   ],
