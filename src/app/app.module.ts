@@ -11,6 +11,9 @@ import { FeaturesComponent } from './features/features.component';
 import {MatIconModule} from '@angular/material/icon';
 import { CustomerReportComponent } from './customer-report/customer-report.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TooltipComponent } from './shared/tooltip/tooltip.component';
+import { TooltipDirective } from './directive/tooltip.directive';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -20,11 +23,14 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     HomeComponent,
     FeaturesComponent,
     CustomerReportComponent,
+    TooltipComponent,
+    TooltipDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
+    OverlayModule,
     MatIconModule,
     BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({
