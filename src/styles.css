@@ -16,11 +16,38 @@ body { margin: 0; font-family: Inter, sans-serif; font-size: 14px; }
     justify-content: space-between;
 }
 .mt-4{
-margin-top: 4rem;
+margin-top: 4rem !important;
 }
+.mt-2{
+    margin-top: 2rem !important;
+    }
+.mb-4{
+    margin-bottom: 4rem;
+    }
 .bg-gray{
     flex-grow:1;
     background: #F9FAFF;
+
+}
+/* // primary butto  */
+.primary-btn{
+    text-align: center;
+    margin: 40px ;
+    padding: 5px !important;
+    width: 284px;
+    background: #11a683;
+    color: #fff;
+}
+.primary-btn:hover{
+    background: #14d6a9;
+}
+.secondary-btn{
+    text-align: center;
+    margin: 40px ;
+    padding: 5px !important;
+    width: 284px;
+    background: #f0f2fc;
+    color: #c6cbde;
 
 }
 
