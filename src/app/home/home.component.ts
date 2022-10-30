@@ -49,11 +49,12 @@ export class HomeComponent implements OnInit {
   addProgressBar(){
     if(this.side){
     var c = this.barCounter % this.side?.nativeElement.children.length;
-    console.log()
     for(let i=0;i <  this.side?.nativeElement.children.length;i++){
+    this.side.nativeElement.children[i].children[0].setAttribute('style', "color:#4A6EE0")
     this.side.nativeElement.children[i].children[2].children[0].children[0].classList.remove('progressActive')
     }
     this.side.nativeElement.children[c].children[2].children[0].children[0].classList.add('progressActive')
+    this.side.nativeElement.children[c].children[0].setAttribute('style', "color:black")
 
     ++this.barCounter
     }
