@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-customer-report',
   templateUrl: './customer-report.component.html',
-  styleUrls: ['./customer-report.component.css']
+  styleUrls: ['./customer-report.component.css'],
+  encapsulation:ViewEncapsulation.None
 })
 export class CustomerReportComponent implements OnInit {
   values = [{ value: 75, text: 'of Grammarly users find writing more enjoyable.' },

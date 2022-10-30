@@ -1,9 +1,9 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   @ViewChild('a', { read: ElementRef, static:false }) aImg: ElementRef |undefined;
@@ -25,16 +25,19 @@ export class HomeComponent implements OnInit {
     if(this.aImg){
     var c = this.counter % this.aImg?.nativeElement.children.length;
     for(let i=0;i <  this.aImg?.nativeElement.children.length;i++){
-      this.aImg?.nativeElement.children[i].setAttribute("style", "display: none")
       // for(let j=0; j<this.aImg.nativeElement.children[i].children.length ; j++){
       this.aImg?.nativeElement.children[i].children[0].classList.remove("userTextActive")
       this.aImg?.nativeElement.children[i].children[1].classList.remove("correctionActive")
+      this.aImg?.nativeElement.children[i].setAttribute("style", "display: none")
+
+
       
 
       // }
     }
 
      this.aImg?.nativeElement.children[c].setAttribute("style", "display: block")
+
     //  for(let j=0; j<this.aImg.nativeElement.children[c].children.length ; j++){
       this.aImg?.nativeElement.children[c].children[0].classList.add('userTextActive')
       this.aImg?.nativeElement.children[c].children[1].classList.add('correctionActive')

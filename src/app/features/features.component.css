@@ -3,20 +3,20 @@
     max-width: 674px;
     width: 100%;
 }
-.box{
+.feature-box{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 1080px;
-    position: relative;
+    /* max-width: 1080px; */
+    /* position: relative; */
 }
-.box .title h1{
+.feature-box .title h1{
     font-style: normal;
     font-weight: 700;
     margin: 0;
     font-size: 29px;
-}
-.box .title .heading-subtitle{
+} 
+.feature-box .heading-subtitle{
     font-size: 18px;
     line-height: 32px;
     font-style: normal;
@@ -24,24 +24,24 @@
     margin: 20px 0;
    
 }
-.box .features-points p{
+.feature-box .features-points p{
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     display: flex;
    
 }
-.box .features-points .mat-icon{
+.feature-box .features-points .mat-icon{
     font-size: 18px;
     font-weight: 600;
     color: #12C39A;
    
 }
-.box .features-points p span{
+.feature-box .features-points p span{
     border-bottom: 1px dotted #9fa6bf;
    
 }
-.box .title{
+.feature-box .title{
     text-align: center;
 }
 .features-points{
@@ -49,18 +49,57 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
-.box .features-points .subtitle{
+.feature-box .features-points .subtitle{
     color: rgb(109, 117, 141);
     font-size: 11px;
     letter-spacing: 1px;
 }
-.box .features-points h3{
+.feature-box .features-points h3{
     font-size: 15px;
     font-weight: normal;
     min-height: 37px;
 }
-.box .title button{
+.feature-box .title button{
     text-align: center;
     margin: 40px 0;
     padding: 5px 25px;
+}
+
+/* @media only screen  and (max-width:576px){
+    .features-points{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-row: 1 / span 2;
+        gap: 10px;
+        padding: 50px;
+    }
+    
+   
+} */
+@media only screen and (min-width:576px){
+    /* .features-points{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-row: 1 / span 2;
+        gap: 10px;
+    } */
+   
+}
+@media only screen and (max-width:768px) {
+    .features-points{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: .5fr 1fr;
+        grid-row: 1 / span 2;
+        gap: 10px;
+        padding: 0 50px;
+    }
+}
+
+@media only screen  and (min-width:992px) {
+    
+
+   
 }
