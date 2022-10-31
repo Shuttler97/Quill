@@ -39,7 +39,7 @@
 }
 .userTextActive  {
     opacity: 1;
-    transform: translateY(30px);
+    transform: translate3d(0,-30px,0);
     transition: linear 2s ease 1s;
     transition-property: opacity,transform;
     margin-top: 10px;
@@ -53,7 +53,7 @@
     box-shadow: 0 14px 55px rgb(109 117 141 / 20%);
     opacity: 1;
     position: absolute;
-    transform: translateY(-30px);
+    transform: translate3d(0,-30px,0);
     transition: linear 2s ease 1s;
     transition-property: opacity,transform;
     z-index: 2;
@@ -138,7 +138,17 @@
         width: unset;
     }
     .image-container{
-        width: unset;
+        width: 380px;
+        overflow-x: hidden;
+    }
+    .image-container .userTextActive{
+        height: 220px;
+        width: auto;
+    }
+    .image-container .correctionActive{
+        height: 100px;
+        width: auto;
+        bottom: 50px;
     }
    
 }
